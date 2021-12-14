@@ -5,6 +5,7 @@ const path = require('path');
 
 /**
  * @param {Egg.EggAppInfo} appInfo app info
+ * * @param {Egg.EggAppConfig} appConfig app config
  */
 module.exports = (appInfo, appConfig = {}) => {
   const assetsDir = (appConfig.assets && appConfig.assets.dir) || 'app/web';
