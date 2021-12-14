@@ -8,12 +8,12 @@ interface Props {
 
 const NewsItem: FC<Props> = ({ news }) => {
   return (
-    <div>
+    <div className={styles.cell}>
       <h3>
         <a href={news?.url}>{news?.title}</a>
       </h3>
       <div>
-        by: {news.by} {moment.relativeTime(news.time)} ago
+        by: {news.by} {moment.relativeTime(news.time)}
       </div>
     </div>
   );
