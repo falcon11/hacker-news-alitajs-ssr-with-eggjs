@@ -54,6 +54,9 @@ module.exports = (appInfo, appConfig = {}) => {
       serverUrl: 'https://hacker-news.firebaseio.com/v0',
       pageSize: 20,
     },
+    v2ex: {
+      serverUrl: 'https://www.v2ex.com',
+    },
   };
 
   return {
