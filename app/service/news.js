@@ -3,6 +3,7 @@ const Serviece = require('egg').Service;
 
 class NewsService extends Serviece {
   async getNewsList(page = 1) {
+    page = parseInt(page);
     const { serverUrl, pageSize } = this.config.news;
     const { data: idList } = await this.ctx.curl(
       `${serverUrl}/topstories.json`,

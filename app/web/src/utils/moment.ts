@@ -1,5 +1,8 @@
-import moment from 'moment';
+import dayjs from 'dayjs';
+import _relativeTime from 'dayjs/plugin/relativeTime';
 
-const relativeTime = (time: number) => moment(new Date(time * 1000)).fromNow();
+dayjs.extend(_relativeTime);
+
+const relativeTime = (time: number) => dayjs(new Date(time * 1000)).fromNow();
 
 export { relativeTime };

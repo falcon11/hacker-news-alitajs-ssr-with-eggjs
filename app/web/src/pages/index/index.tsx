@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import {} from 'alita';
 import qs from 'qs';
-import fetcher from '@/utils/fetcher';
-import styles from './index.less';
+// import fetcher from '@/utils/fetcher';
+import { getNewsList } from './service';
 import NewsItem from '@/components/NewsItem';
+import styles from './index.less';
 
 interface HomePageProps {
   newsList: any[];
@@ -26,7 +26,7 @@ HomePage.getInitialProps = async (ctx: any) => {
     const newsList = await service.news.getNewsList(query.page);
     return { newsList, pageSize };
   }
-  const newsList = (await fetcher.get('/api/news', { params: { page: query.page } })).data || [];
+  const newsList = (await getNewsList({ page: query.page })) || [];
   return { newsList, pageSize: 20 };
 };
 
