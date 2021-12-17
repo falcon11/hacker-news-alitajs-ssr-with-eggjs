@@ -2,6 +2,6 @@
   "extends": "eslint-config-egg",
   "rules": {
     "arrow-body-style": 0,
-    "arrow-parens": "always"
+    "arrow-parens": 0
   }
 }
